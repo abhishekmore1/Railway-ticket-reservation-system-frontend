@@ -1,0 +1,45 @@
+<header><p>Online Ticket Reservation System</p></header>
+    
+<ul>
+    <li> <a href="#">Home</a></li>
+    <li><a href="#">Search Train</a></li>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Sign up</a></li>
+    <li><a href="#">Admin Login</a></li>
+</ul>
+
+
+<div class="searchdiv">
+    <input type="text" placeholder="Enter Source" class="input" name="source" >
+    <!-- *ngModel -->
+    <input type="text" placeholder="Enter Destination" class="input" name="destination" >
+    <input type="button" value="Search" class="button" (click)="SearchTrain(source,destination)">
+</div>
+<br>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Train Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Ticket Fare</th>
+            <th>Book Ticket</th>
+        </tr>
+        <tr *ngFor="let train of trains">
+            <td>{{train.trainName}}</td>
+            <td>{{train.fromStation}}</td>
+            <td>{{train.toStation}}</td>
+            <td>{{train.date}}</td>
+            <td>{{train.time}}</td>
+            <td>{{train.ticketFare}}</td>
+            <td><input type="button" value="Book Ticket" class="button" ></td>
+        </tr>
+    </table>
+</div>
+<br>
+
+<footer><p>Copyright: Online Ticket Reservation System</p></footer>
+
