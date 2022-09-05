@@ -19,10 +19,15 @@ export class SearchTrainComponent implements OnInit {
     response.subscribe((data)=>this.trains=data);
   }
 
-  SearchTrain(source:any,destination:any){
+  searchTrain(source:any,destination:any){
     console.log(source,destination);
     let response=this.service.searchTrainByFromAndTo(source,destination);
-    response.subscribe((data)=>console.log(data));
+    response.subscribe((data)=>this.trains=data);
+  }
+
+  reset(){
+    let response=this.service.getAllTrains();
+    response.subscribe((data)=>this.trains=data);
   }
 
 }

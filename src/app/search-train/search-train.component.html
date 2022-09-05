@@ -9,12 +9,13 @@
 </ul>
 
 
-<div class="searchdiv">
-    <input type="text" placeholder="Enter Source" class="input" name="source" >
+<form class="searchdiv" method="post">
+    <input #source type="text" placeholder="Enter Source" class="input" name="source" id="source">
     <!-- *ngModel -->
-    <input type="text" placeholder="Enter Destination" class="input" name="destination" >
-    <input type="button" value="Search" class="button" (click)="SearchTrain(source,destination)">
-</div>
+    <input #destination type="text" placeholder="Enter Destination" class="input" name="destination" id="destination">
+    <input type="submit" value="Search" class="button" (click)="searchTrain(source.value,destination.value)">
+    <input type="submit" value="Reset" class="button" (click)="reset()">
+</form>
 <br>
 
 <div class="container">
@@ -42,4 +43,3 @@
 <br>
 
 <footer><p>Copyright: Online Ticket Reservation System</p></footer>
-
