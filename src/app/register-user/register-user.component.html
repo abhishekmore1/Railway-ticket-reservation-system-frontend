@@ -1,13 +1,5 @@
+
 <form>
-    <header><p>Online Ticket Reservation System</p></header>
-    
-    <ul>
-        <li> <a href="#">Home</a></li>
-        <li><a href="#">Search Train</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Sign up</a></li>
-        <li><a href="#">Admin Login</a></li>
-    </ul>
     <div>
         <p>Register User</p>
     </div>
@@ -17,7 +9,7 @@
             <input type="text" [(ngModel)]="user.userName" placeholder="Enter Username" name="username" required>
 
             <label for="email"><b>Email</b></label>
-            <input type="text" [(ngModel)]="user.userEmail" placeholder="Enter Email" name="email" required>
+            <input type="email" [(ngModel)]="user.userEmail" placeholder="Enter Email" name="email" required>
 
             <label for="number"><b>Mob Number</b></label>
             <input type="text" [(ngModel)]="user.userPhoneNo" placeholder="Enter Mob Number" name="number" required>
@@ -26,7 +18,12 @@
             <input type="password" [(ngModel)]="user.userPassword" placeholder="Enter Password" name="psw" required>
             <hr>
         <button type="submit" (click)="registerNow()">Register</button> 
-    </div> 
+        
+    </div>
+    
+    <div>
+        <p class="successMessage">{{message}}</p>
+    </div>
 </form>
 
 

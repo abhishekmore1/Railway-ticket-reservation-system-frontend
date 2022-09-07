@@ -1,12 +1,4 @@
-<header><p>Online Ticket Reservation System</p></header>
-    
-<ul>
-    <li> <a href="#">Home</a></li>
-    <li><a href="#">Search Train</a></li>
-    <li><a href="#">Login</a></li>
-    <li><a href="#">Sign up</a></li>
-    <li><a href="#">Admin Login</a></li>
-</ul>
+
 
 
 <form class="searchdiv" method="post">
@@ -21,6 +13,7 @@
 <div class="container">
     <table>
         <tr>
+            <th>Train Id</th>
             <th>Train Name</th>
             <th>Source</th>
             <th>Destination</th>
@@ -30,16 +23,18 @@
             <th>Book Ticket</th>
         </tr>
         <tr *ngFor="let train of trains">
+            <td>{{train.trainId}}</td>
             <td>{{train.trainName}}</td>
             <td>{{train.fromStation}}</td>
             <td>{{train.toStation}}</td>
             <td>{{train.date}}</td>
             <td>{{train.time}}</td>
             <td>{{train.ticketFare}}</td>
-            <td><input type="button" value="Book Ticket" class="button" ></td>
+            <td><input type="button" value="Book Ticket" class="button" (click)="bookTicket(train.id)"></td>
         </tr>
     </table>
 </div>
 <br>
 
 <footer><p>Copyright: Online Ticket Reservation System</p></footer>
+

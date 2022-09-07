@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterUserComponent implements OnInit {
 
   user: any=new User("","","","");
+  message:any;
 
   constructor(private service:RegistrationServieService) { }
 
@@ -18,7 +19,7 @@ export class RegisterUserComponent implements OnInit {
 
   public registerNow(){
     let response=this.service.userRegistration(this.user);
-    response.subscribe((data)=>console.log(data));
+    response.subscribe((data)=>this.message);
   }
 
 }
