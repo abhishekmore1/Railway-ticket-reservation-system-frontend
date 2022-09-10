@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  admin: any;
   constructor(
     private userAuthService: UserAuthService,
     private router: Router
@@ -16,7 +17,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   public isLoggedIn() {
+    // console.log(this.userAuthService.isLoggedIn());
     return this.userAuthService.isLoggedIn();
+  }
+
+  public getUser() {
+    // console.log(this.userAuthService.getUser().role);
+    return this.userAuthService.getUser();
   }
 
   public logout() {

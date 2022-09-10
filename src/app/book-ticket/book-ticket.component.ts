@@ -26,7 +26,7 @@ export class BookTicketComponent implements OnInit {
     let response = this.service.ticketBooking(this.trainId, this.ticket);
     response.subscribe((data) => (this.message = data));
     console.log(this.message);
-    this.router.navigate(['/searchTrain']);
+    // this.router.navigate(['/searchTrain']);
     // if (this.message === 'Booking successful') {
     // }
   }

@@ -1,26 +1,16 @@
 
-    <header><p>Online Ticket Reservation System</p></header>
     
-    <div>
-        <ul>
-            <li> <a href="http://localhost:4200/">Home</a></li>
-            <li><a href="http://localhost:4200/searchTrain">Search Train</a></li>
-            <li><a href="http://localhost:4200/login">Login</a></li>
-            <li><a href="http://localhost:4200/register">Sign up</a></li>
-            <li><a href="http://localhost:4200/adminLogin">Admin Login</a></li>
-        </ul>
-    </div>
     
     <div>
 
-    <h1 class="login"> Login </h1>  
-    <form>
+    <h1 class="login">Admin Login </h1>  
+    <form #loginForm="ngForm" (ngSubmit)="adminLogin(loginForm)">
         <div class="container"> 
             <label>User Name : </label> 
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <input type="text" placeholder="Enter Username" ngModel name="username" name="username" required>
             <label>Password : </label> 
-            <input type="password" placeholder="Enter Password" name="password" required>
-            <button type="submit">SignIn</button> 
+            <input type="password" placeholder="Enter Password" ngModel name="password" name="password" required>
+            <input type="submit" value="Login" class="loginBtn">
         </div> 
     </form>   
 
@@ -28,5 +18,5 @@
     </div>
     
     
-    <footer><p>Copyright: Online Ticket Reservation System</p></footer>
+    <footer><p>©Copyright: Online Ticket Reservation System</p></footer>
 

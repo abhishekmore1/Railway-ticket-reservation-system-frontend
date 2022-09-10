@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { UserAuthService } from './../user-auth.service';
 import { RegistrationServieService } from './../registration-servie.service';
@@ -15,13 +16,18 @@ export class SearchTrainComponent implements OnInit {
 
   constructor(
     private service: RegistrationServieService,
-    private userAuthService: UserAuthService,
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
+    // let response = this.http.get('http://localhost:8081/train/getAllTrain', {
+    //   responseType: 'json',
+    // });
     let response = this.service.getAllTrains();
+    console.log(response);
     response.subscribe((data) => (this.trains = data));
+    console.log(this.trains);
   }
 
   searchTrain(source: any, destination: any) {
@@ -35,11 +41,11 @@ export class SearchTrainComponent implements OnInit {
     response.subscribe((data) => (this.trains = data));
   }
 
-  public bookTicket(trainId: any) {
-    if (this.userAuthService.isLoggedIn()) {
-      this.router.navigate(['/bookTicket']);
-    } else {
-      this.router.navigate(['/login']);
-    }
+  bookTicket(trainId: any) {
+    // if (this.userAuthService.isLoggedIn()) {
+    this.router.navigate(['/bookTicket']);
+    // } else {
+    //   this.router.navigate(['/login']);
+    // }
   }
 }

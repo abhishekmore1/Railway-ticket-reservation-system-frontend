@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="heading"><p>My Booking</p></div>
+    <div class="heading"><p>All Bookings</p></div>
 
     <!-- <div>
         <table>
@@ -69,7 +69,7 @@
             <td>{{ticket.destination}}</td>
             <td>{{ticket.noOfTickets}}</td>
             <td>{{ticket.totalPrice}}</td>
-            <td><input type="button" value="Cancel Ticket" class="button" (click)="cancelTicket(ticket.pnrNo)"></td>
+            <td><input type="button" value="Cancel Ticket" class="button" (click)="deleteTicket(ticket.pnrNo)"></td>
         </tr>
     </table>
 </div>

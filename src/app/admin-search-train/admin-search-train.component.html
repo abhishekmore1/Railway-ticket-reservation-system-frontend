@@ -20,7 +20,7 @@
             <th>Date</th>
             <th>Time</th>
             <th>Ticket Fare</th>
-            <th>Book Ticket</th>
+            <th>Delete Train</th>
         </tr>
         <tr *ngFor="let train of trains">
             <td>{{train.trainId}}</td>
@@ -30,7 +30,7 @@
             <td>{{train.date}}</td>
             <td>{{train.time}}</td>
             <td>{{train.ticketFare}}</td>
-            <td><input type="button" value="Book Ticket" class="button" (click)="bookTicket(train.id)"></td>
+            <td><input type="button" value="Delete Train" class="button" (click)="deleteTrain(train.trainId)"></td>
         </tr>
     </table>
 </div>

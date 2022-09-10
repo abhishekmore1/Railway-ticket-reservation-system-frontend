@@ -37,50 +37,31 @@ li {
   margin: 2px;
   text-decoration: none;
 }
-img {
-  margin-top: -16px;
-  width: 94em;
-  height: 33em;
-}
 div p {
-  position: absolute;
-  top: 250px;
-  color: white;
-  left: 50px;
-  font-size: 50px;
+  color: Black;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.container {
-  width: 35%;
-  margin: 0 auto;
-  padding: 25px;
-  background-color: white;
-}
-
-.loginBtn {
-  background-color: #a480ff;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
   width: 100%;
-  padding: 15px;
-  margin: 10px 0px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.button {
+  background-color: #555555;
+  color: white;
+  padding: 10px;
   border: none;
-  color: white;
+  border-radius: 5px;
   cursor: pointer;
-}
-form {
-  border: 3px solid #f1f1f1;
-}
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  margin: 8px 0;
-  padding: 12px 20px;
-  display: inline-block;
-  border: 2px solid green;
-  box-sizing: border-box;
-}
-button:hover {
-  opacity: 0.7;
-}
-.login {
   text-align: center;
 }

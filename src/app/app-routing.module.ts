@@ -1,3 +1,6 @@
+import { AllBookingsComponent } from './all-bookings/all-bookings.component';
+import { AdminSearchTrainComponent } from './admin-search-train/admin-search-train.component';
+import { AddTrainComponent } from './add-train/add-train.component';
 import { AuthGuard } from './authGuard/auth.guard';
 import { BookTicketComponent } from './book-ticket/book-ticket.component';
 import { BookingsComponent } from './bookings/bookings.component';
@@ -18,7 +21,7 @@ const routes: Routes = [
     component: UpdateuserComponent,
     canActivate: [AuthGuard],
   },
-  { path: 'bookings', component: BookingsComponent, canActivate: [AuthGuard] },
+  { path: 'bookings', component: BookingsComponent },
   { path: 'login', component: LoginComponent },
   {
     path: 'adminLogin',
@@ -27,12 +30,23 @@ const routes: Routes = [
   {
     path: 'searchTrain',
     component: SearchTrainComponent,
-    canActivate: [AuthGuard],
   },
   {
     path: 'bookTicket',
     component: BookTicketComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'addTrain',
+    component: AddTrainComponent,
+  },
+  {
+    path: 'adminSearchTrain',
+    component: AdminSearchTrainComponent,
+  },
+  {
+    path: 'allBookings',
+    component: AllBookingsComponent,
   },
 ];
 

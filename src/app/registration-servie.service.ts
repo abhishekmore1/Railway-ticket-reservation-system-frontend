@@ -4,6 +4,7 @@ import { Login } from './login';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from './user';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +16,7 @@ export class RegistrationServieService {
 
   public userRegistration(user: User) {
     return this.http.post('http://localhost:8100/user/userRegistration', user, {
+      headers: this.requestHeader,
       responseType: 'text' as 'json',
     });
   }
@@ -42,7 +44,17 @@ export class RegistrationServieService {
   // }
 
   public getAllTrains() {
-    return this.http.get('http://localhost:8100/user/getAllTrain');
+    // console.log(
+    //   subscribe(
+    //     this.http.get('http://localhost:8100/user/getAllTrain', {
+    //       responseType: 'text',
+    //     })
+    //   )
+    // );
+    return this.http.get('http://localhost:8100/user/getAllTrain', {
+      headers: this.requestHeader,
+      responseType: 'json',
+    });
   }
 
   public getTrain(id: any) {
@@ -51,7 +63,10 @@ export class RegistrationServieService {
 
   public searchTrainByFromAndTo(source: any, destination: any) {
     return this.http.get(
-      'http://localhost:8100/user/' + source + '/and/' + destination
+      'http://localhost:8100/user/' + source + '/and/' + destination,
+      {
+        headers: this.requestHeader,
+      }
     );
   }
 
@@ -86,4 +101,30 @@ export class RegistrationServieService {
       }
     );
   }
+
+  public adminSearchTrain() {
+    return this.http.get('http://localhost:8100/admin/getAllTrain');
+  }
+
+  public deleteTrain(trainId: any) {
+    return this.http.delete(
+      'http://localhost:8100/admin/deleteTrain/' + trainId,
+      {
+        responseType: 'text' as 'json',
+      }
+    );
+  }
+
+  public getAllBooking() {
+    return this.http.get('http://localhost:8100/admin/viewAllBooking');
+  }
+
+  public addTrain(train: any) {
+    return this.http.post('http://localhost:8100/admin/addTrain', train, {
+      responseType: 'text' as 'json',
+    });
+  }
+}
+function subscribe(arg0: Observable<Object>): any {
+  throw new Error('Function not implemented.');
 }
