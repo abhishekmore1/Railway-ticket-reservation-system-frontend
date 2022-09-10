@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RegistrationServieService } from './../registration-servie.service';
 import { User } from '../user';
 import { Component, OnInit } from '@angular/core';
@@ -17,6 +17,7 @@ export class RegisterUserComponent implements OnInit {
     private service: RegistrationServieService,
     private http: HttpClient
   ) {}
+  requestHeader = new HttpHeaders({ 'No-Auth': 'True' });
 
   ngOnInit(): void {}
 
@@ -24,6 +25,7 @@ export class RegisterUserComponent implements OnInit {
     // let response = this.http.post(
     //   'http://localhost:8100/user/userRegistration',
     //   {
+    //     headers: this.requestHeader,
     //     responseType: 'text' as 'json',
     //   }
     // );
