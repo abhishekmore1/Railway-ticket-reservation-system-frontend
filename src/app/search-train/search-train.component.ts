@@ -1,8 +1,9 @@
+// import { EventEmitter } from 'stream';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { UserAuthService } from './../user-auth.service';
 import { RegistrationServieService } from './../registration-servie.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-train',

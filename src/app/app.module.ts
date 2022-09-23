@@ -21,6 +21,7 @@ import { AuthInterceptor } from './authGuard/auth.interceptor';
 import { AddTrainComponent } from './add-train/add-train.component';
 import { AdminSearchTrainComponent } from './admin-search-train/admin-search-train.component';
 import { AllBookingsComponent } from './all-bookings/all-bookings.component';
+import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AllBookingsComponent } from './all-bookings/all-bookings.component';
     AddTrainComponent,
     AdminSearchTrainComponent,
     AllBookingsComponent,
+    TicketDetailsComponent,
   ],
   imports: [
     BrowserModule,

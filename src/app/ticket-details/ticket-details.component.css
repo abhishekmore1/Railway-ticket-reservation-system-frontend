@@ -4,22 +4,12 @@
   border: 0;
 }
 
-header p {
-  margin-left: 20px;
-}
 header {
   font-size: 30px;
   font-weight: bold;
   background-color: #14b380;
   padding: 1px;
   color: white;
-}
-footer {
-  background-color: #14b380;
-  padding: 1px;
-  text-align: center;
-  color: white;
-  margin-top: -5px;
 }
 ul {
   background-color: #03593e;
@@ -42,47 +32,50 @@ img {
   width: 94em;
   height: 33em;
 }
-div p {
-  position: absolute;
-  top: 250px;
-  color: white;
-  left: 50px;
-  font-size: 50px;
-}
 
+footer {
+  background-color: #14b380;
+  padding: 1px;
+  text-align: center;
+  color: white;
+  margin-top: -5px;
+}
 .container {
   width: 35%;
   margin: 0 auto;
-  padding: 25px;
-  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
 }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+td,
+th {
+  /* border: 1px solid #dddddd; */
 
-.loginBtn {
+  text-align: left;
+  padding: 20px;
+}
+.title {
+  text-align: center;
+  font-family: arial, sans-serif;
+  font-size: 35px;
+  font-weight: bolder;
+}
+button {
   background-color: #a480ff;
   width: 100%;
-  padding: 15px;
-  margin: 10px 0px;
-  border: none;
   color: white;
+  border-radius: 10px;
+  padding: 15px;
+  /* margin: 10px 180px;  */
+  border: none;
   cursor: pointer;
   border-radius: 30px;
-}
-form {
-  border: 3px solid #f1f1f1;
-}
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  margin: 8px 0;
-  padding: 12px 20px;
-  display: inline-block;
-  border: 2px solid green;
-  box-sizing: border-box;
-  border-radius: 30px;
+  margin: 5px;
 }
 button:hover {
   opacity: 0.7;
-}
-.login {
-  text-align: center;
 }

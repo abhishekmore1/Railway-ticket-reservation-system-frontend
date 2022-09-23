@@ -1,3 +1,5 @@
+import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
+import { TicketDetails } from './bookTicket';
 import { AllBookingsComponent } from './all-bookings/all-bookings.component';
 import { AdminSearchTrainComponent } from './admin-search-train/admin-search-train.component';
 import { AddTrainComponent } from './add-train/add-train.component';
@@ -47,6 +49,10 @@ const routes: Routes = [
   {
     path: 'allBookings',
     component: AllBookingsComponent,
+  },
+  {
+    path: 'ticketDetails',
+    component: TicketDetailsComponent,
   },
 ];
 

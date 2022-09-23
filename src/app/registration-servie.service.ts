@@ -124,6 +124,18 @@ export class RegistrationServieService {
       responseType: 'text' as 'json',
     });
   }
+
+  public payAmount() {
+    return this.http.get('http://localhost:8090', {
+      responseType: 'text' as 'json',
+    });
+  }
+
+  public getTicket(email: any) {
+    return this.http.get('http://localhost:8100/user/viewTicket/' + email, {
+      responseType: 'json',
+    });
+  }
 }
 function subscribe(arg0: Observable<Object>): any {
   throw new Error('Function not implemented.');
