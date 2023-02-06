@@ -16,7 +16,7 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { UpdateuserComponent } from './updateuser/updateuser.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'register', component: RegisterUserComponent },
   {
     path: 'updateUser',
